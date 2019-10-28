@@ -49,6 +49,17 @@ let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 
+//h1
+const ptOne = document.createElement('h1')
+const ptTwo = document.createElement('h1')
+const ptThree = document.createElement('h1')
+
+ptOne.textContent = siteContent["cta"]["h1"].slice(0,3)
+ptTwo.textContent = siteContent["cta"]["h1"].slice(4,6)
+ptThree.textContent = siteContent["cta"]["h1"].slice(-7)
+
+
+
 //nav
 const navA = document.querySelectorAll('nav a');
 navA[0].textContent = siteContent["nav"]["nav-item-1"]
@@ -59,7 +70,9 @@ navA[4].textContent = siteContent["nav"]["nav-item-5"]
 navA[5].textContent = siteContent["nav"]["nav-item-6"]
 
 //cta
-document.querySelector('.cta-text h1').textContent = siteContent["cta"]["h1"]
+document.querySelector('.cta-text h1').append(ptOne)
+document.querySelector('.cta-text h1').append(ptTwo)
+document.querySelector('.cta-text h1').append(ptThree)
 document.querySelector('.cta-text button').textContent = siteContent["cta"]["button"]
 
 //h4
@@ -81,7 +94,15 @@ text[4].textContent = siteContent["main-content"]["vision-content"]
 
 // contact info 
 const contactInfo = document.querySelectorAll('.contact p')
-contactInfo[0].textContent = siteContent["contact"]["address"]
+const addOne = document.createElement('p')
+const addTwo = document.createElement('p')
+
+addOne.textContent = siteContent["contact"]["address"].slice(0,19)
+addTwo.textContent = siteContent["contact"]["address"].slice(-14)
+
+document.querySelector('.contact p').append(addOne)
+document.querySelector('.contact p').append(addTwo)
+
 contactInfo[1].textContent = siteContent["contact"]["phone"]
 contactInfo[2].textContent = siteContent["contact"]["email"]
 
@@ -95,7 +116,7 @@ const okIdea = document.createElement('a')
 const badIdea = document.createElement('a')
 
 okIdea.textContent = "Okay Idea";
-badIdea.textContent = "Bad Idea"
+badIdea.textContent = "Bad Idea";
 
 const newNavA = document.querySelector('nav')
 
@@ -106,4 +127,8 @@ document.querySelectorAll('nav a').forEach( link => {
   link.style.color = "green";
 })
 
+
 //stretch styling fest
+document.querySelectorAll('h4').forEach( header => {
+  header.style.color = "red";
+})
