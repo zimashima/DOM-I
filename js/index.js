@@ -120,6 +120,7 @@ badIdea.textContent = "Bad Idea";
 
 const newNavA = document.querySelector('nav')
 
+
 newNavA.appendChild(okIdea)
 newNavA.prepend(badIdea)
 
@@ -132,3 +133,5 @@ document.querySelectorAll('nav a').forEach( link => {
 document.querySelectorAll('h4').forEach( header => {
   header.style.color = "red";
 })
+
+document.querySelector('.main-content').style.background = "whitesmoke";
