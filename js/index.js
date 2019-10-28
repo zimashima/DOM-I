@@ -62,10 +62,7 @@ navA[5].textContent = siteContent["nav"]["nav-item-6"]
 document.querySelector('.cta-text h1').textContent = siteContent["cta"]["h1"]
 document.querySelector('.cta-text button').textContent = siteContent["cta"]["button"]
 
-
-
 //h4
-
 const headerFour = document.querySelectorAll('h4')
 headerFour[0].textContent = siteContent["main-content"]["features-h4"]
 headerFour[1].textContent = siteContent["main-content"]["about-h4"]
@@ -75,7 +72,6 @@ headerFour[4].textContent = siteContent["main-content"]["vision-h4"]
 headerFour[5].textContent = siteContent["contact"]["contact-h4"]
 
 //main content p
-
 const text = document.querySelectorAll('.text-content p')
 text[0].textContent = siteContent["main-content"]["features-content"]
 text[1].textContent = siteContent["main-content"]["about-content"]
@@ -84,13 +80,28 @@ text[3].textContent = siteContent["main-content"]["product-content"]
 text[4].textContent = siteContent["main-content"]["vision-content"]
 
 // contact info 
-
 const contactInfo = document.querySelectorAll('.contact p')
 contactInfo[0].textContent = siteContent["contact"]["address"]
 contactInfo[1].textContent = siteContent["contact"]["phone"]
 contactInfo[2].textContent = siteContent["contact"]["email"]
 
 //footer
-
 const footerElement = document.querySelector('footer')
 footerElement.append(siteContent["footer"]["copyright"])
+
+//change the navigation text to green
+
+const okIdea = document.createElement('a')
+const badIdea = document.createElement('a')
+
+okIdea.textContent = "Okay Idea";
+badIdea.textContent = "Bad Idea"
+
+const newNavA = document.querySelector('nav')
+
+newNavA.append(okIdea)
+newNavA.prepend(badIdea)
+
+document.querySelectorAll('nav a').forEach( link => {
+  link.style.color = "green";
+})
