@@ -99,9 +99,11 @@ badIdea.textContent = "Bad Idea"
 
 const newNavA = document.querySelector('nav')
 
-newNavA.append(okIdea)
+newNavA.appendChild(okIdea)
 newNavA.prepend(badIdea)
 
 document.querySelectorAll('nav a').forEach( link => {
   link.style.color = "green";
 })
+
+//stretch styling fest
