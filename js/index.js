@@ -48,3 +48,23 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+const headerFour = document.querySelectorAll('h4')
+headerFour[0].textContent = siteContent["main-content"]["features-h4"]
+headerFour[1].textContent = siteContent["main-content"]["about-h4"]
+headerFour[2].textContent = siteContent["main-content"]["services-h4"]
+headerFour[3].textContent = siteContent["main-content"]["product-h4"]
+headerFour[4].textContent = siteContent["main-content"]["vision-h4"]
+headerFour[5].textContent = siteContent["contact"]["contact-h4"]
+
+const text = document.querySelectorAll('.text-content p')
+text[0].textContent = siteContent["main-content"]["features-content"]
+text[1].textContent = siteContent["main-content"]["about-content"]
+text[2].textContent = siteContent["main-content"]["services-content"]
+text[3].textContent = siteContent["main-content"]["product-content"]
+text[4].textContent = siteContent["main-content"]["vision-content"]
+
+
+
+const footerElement = document.querySelector('footer')
+footerElement.append(siteContent["footer"]["copyright"])
