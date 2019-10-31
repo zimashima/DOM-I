@@ -1,24 +1,30 @@
 
 let msTens = document.getElementById('msTens')
-msTens.parentNode.removeChild(msTens)
+let msHund = document.getElementById('msHundreds')
+let theCOlon = document.getElementById('colon')
+let secOne = document.getElementById('secondOnes')
+let secTen = document.getElementById('secondTens')
 
-const ms = (){
-    
-    setInterval()
+let t = 0;
+
+const counting = () =>{
+    if (t < 10000){
+        t = t+10
+        let second = t.toString()
+        msTens.innerHTML = second[second.length-2]
+        msHund.innerHTML = second[second.length-3]
+        if (t >=1000 && t<10000){
+            secOne.innerHTML = second[0]
+        }
+    } else{
+        secTen.innerHTML = '1'
+        secOne.innerHTML = '0'
+        msTens.style.color = "red"
+        msHund.style.color = "red"
+        colon.style.color = "red"
+        secOne.style.color = "red"
+        secTen.style.color = "red"
+    }
 }
 
-const msHund = (){
-    timer = 0;
-    setInterval()
-}
-
-const secOne = (){
-    timer = 0;
-    setInterval()
-}
-
-const secTen = (){
-    timer = 0;
-    setInterval()
-}
-
+let myTime = setInterval(counting, 10)
